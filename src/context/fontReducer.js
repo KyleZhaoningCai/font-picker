@@ -1,6 +1,7 @@
 import {
   GET_TABS,
-  SET_LOADING
+  SET_LOADING,
+  SET_TAB
 } from './types'
 
 export default (state, action) => {
@@ -15,6 +16,11 @@ export default (state, action) => {
       return {
         ...state,
         loading: true
+      }
+    case SET_TAB:
+      return {
+        ...state,
+        currentTab: action.payload
       }
     default:
       return state

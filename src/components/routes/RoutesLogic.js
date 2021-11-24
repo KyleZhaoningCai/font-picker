@@ -12,7 +12,6 @@ const RoutesLogic = () => {
   let tabCount = 0
   return (
     <Routes>
-      <Route path='/' element={<MyFonts />} />
       { tabs.map(tab => {
         if ('label' in tab) {
           if (tabCount === 0) {

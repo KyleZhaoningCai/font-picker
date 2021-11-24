@@ -6,12 +6,14 @@ import PropTypes from 'prop-types'
 
 import {
   GET_TABS,
-  SET_LOADING
+  SET_LOADING,
+  SET_TAB
 } from './types'
 
 const FontState = props => {
   const initialState = {
     tabs: [],
+    currentTab: '',
     loading: false
   }
 
@@ -29,11 +31,16 @@ const FontState = props => {
   // Set widget to loading
   const setLoading = () => dispatch({ type: SET_LOADING })
 
+  // Set the current tab when use clicks on one
+  const setTab = (tab) => dispatch({ type: SET_TAB, payload: tab })
+
   return <fontContext.Provider
     value = {{
       tabs: state.tabs,
+      currentTab: state.currentTab,
       loading: state.loading,
-      getTabs
+      getTabs,
+      setTab
     }}>
     {props.children}
   </fontContext.Provider>

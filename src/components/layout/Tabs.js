@@ -6,7 +6,6 @@ const Tabs = () => {
   const fontContext = useContext(FontContext)
 
   const { tabs } = fontContext
-
   return (
     <ul>
       { tabs.map(tab => (

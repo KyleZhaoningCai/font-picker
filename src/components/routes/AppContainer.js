@@ -8,6 +8,10 @@ const AppContainer = () => {
 
   useEffect(() => {
     fontContext.getTabs()
+    const pathArray = window.location.pathname.split('/')
+    if (pathArray.length > 0) {
+      fontContext.setTab(pathArray[pathArray.length - 1])
+    }
   }, [])
   return (
     <div>
