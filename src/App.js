@@ -1,11 +1,18 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import AppContainer from './components/routes/AppContainer'
+import FontState from './context/FontState'
 import './App.css'
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Please Select one font</h1>
-    </div>
+    <FontState>
+      <Router>
+        <div className="App">
+          <AppContainer />
+        </div>
+      </Router>
+    </FontState>
   )
 }
 
