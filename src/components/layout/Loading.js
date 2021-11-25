@@ -4,7 +4,7 @@ import loading from './loading.gif'
 const Loading = () => {
   return (
     <Fragment>
-      <img src={ loading } alt="Loading..." style={{ width: '450px', margin: 'auto', display: 'block' }} />
+      <img src={ loading } alt="Loading..." style={{ width: '200px', margin: 'auto', display: 'block' }} />
     </Fragment>
   )
 }

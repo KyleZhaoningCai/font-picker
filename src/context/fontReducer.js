@@ -4,7 +4,8 @@ import {
   TOGGLE_COLORBLIND,
   GET_TABS,
   SET_LOADING,
-  SET_TAB
+  SET_TAB,
+  SET_SELECTED_FONT
 } from './types'
 
 export default (state, action) => {
@@ -14,11 +15,16 @@ export default (state, action) => {
       if (localStorage.getItem('colorblind') !== null) {
         colorblind = localStorage.getItem('colorblind') === 'true'
       }
+      let selectedFont = ''
+      if (localStorage.getItem('font') !== null) {
+        selectedFont = localStorage.getItem('font')
+      }
       return {
         ...state,
         tabs: action.payload,
         loading: false,
-        colorblind: colorblind
+        colorblind: colorblind,
+        selectedFont: selectedFont
       }
     }
     case SET_LOADING:
@@ -48,6 +54,12 @@ export default (state, action) => {
       return {
         ...state,
         colorblind: action.payload
+      }
+    case SET_SELECTED_FONT:
+      localStorage.setItem('font', action.payload)
+      return {
+        ...state,
+        selectedFont: action.payload
       }
     default:
       return state

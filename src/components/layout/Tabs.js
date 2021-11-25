@@ -6,11 +6,20 @@ const Tabs = () => {
   const fontContext = useContext(FontContext)
 
   const { tabs } = fontContext
+
+  let count = 1
   return (
     <ul className='tabs flex space-between'>
-      { tabs.map(tab => (
-        ('label' in tab) && <Tab key={tab.id} tab={tab} />
-      )) }
+      { tabs.map(tab => {
+        if ('label' in tab) {
+          count++
+          return (
+            <li className='space-right' key={tab.id}><Tab id={'tab_' + (count - 1)} position={count} defaultActive={count === 2} tab={tab} /></li>
+          )
+        } else {
+          return null
+        }
+      }) }
     </ul>
   )
 }

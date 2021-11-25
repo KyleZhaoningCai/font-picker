@@ -8,7 +8,7 @@ const BuyFonts = () => {
 
   return (
     <div className='content all-center'>
-      <div className='centered-text'>{buyFontsContent.content}</div>
+      <div className='buy-font-text'>{buyFontsContent.content}</div>
     </div>
   )
 }

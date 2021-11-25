@@ -5,12 +5,17 @@ import Card from '../element/Card'
 const MyFonts = () => {
   const fontContext = useContext(FontContext)
 
-  const { myFontsContent, colorblind } = fontContext
+  const { myFontsContent } = fontContext
+
+  let count = 3
   return (
     <div className='content my-fonts'>
-      { myFontsContent.content !== undefined && myFontsContent.content.map(font => (
-        <Card key={font.id} font={font} colorblind={colorblind} />
-      )) }
+      { myFontsContent.content !== undefined && myFontsContent.content.map(font => {
+        count++
+        return (
+          <Card id={'card_' + font.id} position={count} key={font.id} font={font} />
+        )
+      }) }
     </div>
   )
 }

@@ -1,9 +1,12 @@
 import React, { useContext } from 'react'
+import { withFocus } from 'react-keyboard-navigation'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import FontContext from '../../context/fontContext'
 
-const Tab = ({ tab: { label, content_endpoint: endpoint } }) => {
+const Tab = withFocus(({ forwardedRef, ...props }) => {
+  const { tab: { label, content_endpoint: endpoint } } = props
+
   const fontContext = useContext(FontContext)
 
   const { currentTab } = fontContext
@@ -13,11 +16,9 @@ const Tab = ({ tab: { label, content_endpoint: endpoint } }) => {
   }
 
   return (
-    <li className='space-right'>
-      <Link to={'/' + endpoint} onClick={onClick} className={ currentTab === endpoint ? 'selected' : 'unselected' }>{ label }</Link>
-    </li>
+    <Link ref={ forwardedRef } {...props} to={'/' + endpoint} onClick={onClick} className={ currentTab === endpoint ? 'selected' : 'unselected' }>{ label }</Link>
   )
-}
+})
 
 Tab.propTypes = {
   tab: PropTypes.object.isRequired

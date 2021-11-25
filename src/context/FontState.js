@@ -10,7 +10,8 @@ import {
   TOGGLE_COLORBLIND,
   GET_TABS,
   SET_LOADING,
-  SET_TAB
+  SET_TAB,
+  SET_SELECTED_FONT
 } from './types'
 
 const FontState = props => {
@@ -19,6 +20,7 @@ const FontState = props => {
     buyFontsContent: {},
     tabs: [],
     currentTab: '',
+    selectedFont: '',
     loading: false,
     colorblind: false
   }
@@ -63,6 +65,11 @@ const FontState = props => {
     dispatch({ type: TOGGLE_COLORBLIND, payload: !state.colorblind })
   }
 
+  // Set selected font
+  const setSelectedFont = (selectedFont) => {
+    dispatch({ type: SET_SELECTED_FONT, payload: selectedFont })
+  }
+
   return <fontContext.Provider
     value = {{
       myFontsContent: state.myFontsContent,
@@ -71,11 +78,13 @@ const FontState = props => {
       currentTab: state.currentTab,
       loading: state.loading,
       colorblind: state.colorblind,
+      selectedFont: state.selectedFont,
       getTabs,
       setTab,
       getBuyFontsContent,
       getMyFontsContent,
-      toggleColorblind
+      toggleColorblind,
+      setSelectedFont
     }}>
     {props.children}
   </fontContext.Provider>
