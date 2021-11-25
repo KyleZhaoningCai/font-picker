@@ -13,7 +13,7 @@ const Tab = ({ tab: { label, content_endpoint: endpoint } }) => {
   }
 
   return (
-    <li>
+    <li className='space-right'>
       <Link to={'/' + endpoint} onClick={onClick} className={ currentTab === endpoint ? 'selected' : 'unselected' }>{ label }</Link>
     </li>
   )

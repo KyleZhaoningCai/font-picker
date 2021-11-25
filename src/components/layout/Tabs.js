@@ -7,7 +7,7 @@ const Tabs = () => {
 
   const { tabs } = fontContext
   return (
-    <ul>
+    <ul className='tabs flex space-between'>
       { tabs.map(tab => (
         ('label' in tab) && <Tab key={tab.id} tab={tab} />
       )) }

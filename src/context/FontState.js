@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import {
   GET_BUY_FONTS_TEXT,
   GET_MY_FONTS_TEXT,
+  TOGGLE_COLORBLIND,
   GET_TABS,
   SET_LOADING,
   SET_TAB
@@ -18,7 +19,8 @@ const FontState = props => {
     buyFontsContent: {},
     tabs: [],
     currentTab: '',
-    loading: false
+    loading: false,
+    colorblind: false
   }
 
   const [state, dispatch] = useReducer(FontReducer, initialState)
@@ -56,6 +58,11 @@ const FontState = props => {
     dispatch({ type: GET_MY_FONTS_TEXT, payload: res.data })
   }
 
+  // Toggle colorblind mode
+  const toggleColorblind = () => {
+    dispatch({ type: TOGGLE_COLORBLIND, payload: !state.colorblind })
+  }
+
   return <fontContext.Provider
     value = {{
       myFontsContent: state.myFontsContent,
@@ -63,10 +70,12 @@ const FontState = props => {
       tabs: state.tabs,
       currentTab: state.currentTab,
       loading: state.loading,
+      colorblind: state.colorblind,
       getTabs,
       setTab,
       getBuyFontsContent,
-      getMyFontsContent
+      getMyFontsContent,
+      toggleColorblind
     }}>
     {props.children}
   </fontContext.Provider>

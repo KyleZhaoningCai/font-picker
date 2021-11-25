@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import Loading from './Loading'
 import Tabs from './Tabs'
+import ColorblindToggle from '../element/ColorblindToggle'
 import FontContext from '../../context/fontContext'
 
 const Navbar = () => {
@@ -22,8 +23,9 @@ const Navbar = () => {
     return <Loading />
   } else {
     return (
-      <nav className="navbar">
+      <nav className="navbar flex space-around align-items-center">
         <h1>Please select one font</h1>
+        <ColorblindToggle />
         <Tabs />
       </nav>
     )

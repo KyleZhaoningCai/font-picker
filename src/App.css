@@ -2,11 +2,10 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #fc540a;
   --dark-color: #333333;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  --grey-color: #888888;
 }
 
 * {
@@ -16,28 +15,11 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: #666;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  width: 100%;
+  background-color: var(--light-color);
+  color: var(--dark-color);
 }
 
 /* Utilities */
@@ -48,54 +30,25 @@ img {
   padding: 0 2rem;
 }
 
-/* Text Styles*/
-.x-large {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+.space-right {
+  margin-right: 20px;
 }
 
-.large {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+/* Flex */
+.flex {
+  display: flex;
 }
 
-.lead {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.space-around {
+  justify-content: space-around;
 }
 
-.text-center {
-  text-align: center;
+.space-between {
+  justify-content: space-between;
 }
 
-.text-primary {
-  color: var(--primary-color);
-}
-
-.text-dark {
-  color: var(--dark-color);
-}
-
-.text-success {
-  color: var(--success-color);
-}
-
-.text-danger {
-  color: var(--danger-color);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-left {
-  text-align: left;
+.align-items-center {
+  align-items: center;
 }
 
 /* Center All */
@@ -107,6 +60,8 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /* Cards */
@@ -344,4 +299,34 @@ table td {
 
 table th {
   background: var(--light-color);
+}
+
+/* Navbar */
+.navbar {
+  min-height: 100px;
+}
+
+/* Tabs */
+.tabs li {
+  display: block;
+}
+
+.tabs li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tabs li a.selected {
+  color: var(--grey-color);
+}
+
+.tabs li a.unselected {
+  color: var(--primary-color);
+}
+
+/* MyFonts && BuyFonts */
+.content {
+  border: 5px solid var(--grey-color);
+  border-radius: 15px;
+  min-height: 500px;
 }

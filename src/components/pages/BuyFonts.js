@@ -7,7 +7,7 @@ const BuyFonts = () => {
   const { buyFontsContent } = fontContext
 
   return (
-    <div className='content'>
+    <div className='content all-center'>
       <div className='centered-text'>{buyFontsContent.content}</div>
     </div>
   )

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 
-const EmptyHome = () => {
+const Home = () => {
   return (
     <Fragment />
   )
 }
 
-export default EmptyHome
+export default Home
