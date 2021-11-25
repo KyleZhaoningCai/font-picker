@@ -38,23 +38,6 @@ body {
   text-align: center;
 }
 
-/* Flex */
-.flex {
-  display: flex;
-}
-
-.space-around {
-  justify-content: space-around;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
 /* Center All */
 .all-center {
   display: flex;
@@ -69,9 +52,17 @@ body {
 /* Navbar */
 .navbar {
   min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* ColorblindToggle */
+.colorblind-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .fake-label {
   background: transparent;
   border: none;
@@ -84,6 +75,11 @@ body {
 }
 
 /* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
 .tabs li {
   display: block;
 }
@@ -223,4 +219,92 @@ body {
 .card:nth-child(2) .color-box .inner-box .box-text,
 .card:nth-child(3) .color-box .inner-box .box-text {
   font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  /* General */
+  h1 {
+    font-size: 18px;
+    flex-shrink: 10;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  /* ColorblindToggle */
+  .colorblind-button {
+    display: block;
+  }
+  .fake-label {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .fake-label .space-right {
+    margin-right: 0;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: block;
+  }
+
+  .tabs li a {
+    font-size: 14px;
+  }
+
+  .tabs li a.selected {
+    color: var(--grey-color);
+  }
+
+  .tabs li a.unselected {
+    color: var(--primary-color);
+  }
+
+  /* MyFonts */
+  .my-fonts {
+    display: block;
+  }
+
+  /* BuyFonts */
+  .buy-font-text {
+    font-size: 14px;
+  }
+
+  /* Card */
+  .fake-div {
+    border: none;
+    background: transparent;
+    text-align: left;
+  }
+  .card {
+    width: 100%;
+    padding: 30px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .card .color-box {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .card .color-box .inner-box {
+    padding: 0 10px !important;
+  }
+
+  .card .color-box .inner-box .box-text {
+    font-size: 30px !important;
+  }
+
+  .card .card-body {
+    margin-top: 50px;
+  }
+
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    display: block;
+  }
 }

@@ -9,7 +9,7 @@ const Tabs = () => {
 
   let count = 1
   return (
-    <ul className='tabs flex space-between'>
+    <ul className='tabs'>
       { tabs.map(tab => {
         if ('label' in tab) {
           count++

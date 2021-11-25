@@ -23,7 +23,7 @@ const Navbar = () => {
     return <Loading />
   } else {
     return (
-      <nav className="navbar flex space-around align-items-center">
+      <nav className="navbar">
         <h1>Please select one font</h1>
         <ColorblindToggle id='toggle_0' position={1} />
         <Tabs />

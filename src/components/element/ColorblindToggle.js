@@ -19,8 +19,8 @@ const ColorblindToggle = withFocus(({ forwardedRef, ...props }) => {
   }
 
   return (
-    <button ref={ forwardedRef } {...props} onKeyDown={handleEnterKeyDown} className='flex space-between align-items-center fake-label'>
-      <span className='space-right'>Colorblind Mode</span>
+    <button ref={ forwardedRef } {...props} onKeyDown={handleEnterKeyDown} className='colorblind-button fake-label'>
+      <div className='space-right'>Colorblind Mode</div>
       <Switch onKeyDown={handleEnterKeyDown} onChange={onChange} onColor='#fc540a' checked={colorblind} />
     </button>
   )
