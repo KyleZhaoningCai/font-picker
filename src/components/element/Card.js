@@ -17,6 +17,7 @@ const Card = withFocus(({ forwardedRef, ...props }) => {
 
   const onClick = (e) => {
     const classNameArray = e.target.className.split(' ')
+    // Set selected font to the abbreviation of the font
     fontContext.setSelectedFont(classNameArray[classNameArray.length - 1])
   }
   return (

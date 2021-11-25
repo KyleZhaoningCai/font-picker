@@ -11,6 +11,7 @@ import {
 export default (state, action) => {
   switch (action.type) {
     case GET_TABS: {
+      // Check for colorblind setting and selected font in local storage
       let colorblind = false
       if (localStorage.getItem('colorblind') !== null) {
         colorblind = localStorage.getItem('colorblind') === 'true'

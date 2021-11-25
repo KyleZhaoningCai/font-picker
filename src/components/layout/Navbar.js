@@ -8,6 +8,7 @@ const Navbar = () => {
   const fontContext = useContext(FontContext)
 
   useEffect(() => {
+    // Get all necessary contents from the api
     fontContext.getTabs()
     fontContext.getMyFontsContent()
     fontContext.getBuyFontsContent()
