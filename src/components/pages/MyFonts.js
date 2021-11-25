@@ -7,7 +7,7 @@ const MyFonts = () => {
 
   const { myFontsContent, colorblind } = fontContext
   return (
-    <div>
+    <div className='content my-fonts'>
       { myFontsContent.content !== undefined && myFontsContent.content.map(font => (
         <Card key={font.id} font={font} colorblind={colorblind} />
       )) }
