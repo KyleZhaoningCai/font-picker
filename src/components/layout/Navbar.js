@@ -1,10 +1,20 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Loading from './Loading'
 import Tabs from './Tabs'
 import FontContext from '../../context/fontContext'
 
 const Navbar = () => {
   const fontContext = useContext(FontContext)
+
+  useEffect(() => {
+    fontContext.getTabs()
+    fontContext.getMyFontsContent()
+    fontContext.getBuyFontsContent()
+    const pathArray = window.location.pathname.split('/')
+    if (pathArray.length > 0) {
+      fontContext.setTab(pathArray[pathArray.length - 1])
+    }
+  }, [])
 
   const { loading } = fontContext
 

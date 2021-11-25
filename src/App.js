@@ -1,7 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
-import AppContainer from './components/routes/AppContainer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import FontState from './context/FontState'
+import Navbar from './components/layout/Navbar'
+import EmptyHome from './components/pages/EmptyHome'
+import MyFonts from './components/pages/MyFonts'
+import BuyFonts from './components/pages/BuyFonts'
 import './App.css'
 
 const App = () => {
@@ -9,7 +12,12 @@ const App = () => {
     <FontState>
       <Router>
         <div className="App">
-          <AppContainer />
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<EmptyHome />} />
+            <Route path='/fonts_a' element={<MyFonts />} />
+            <Route path='/fonts_b' element={<BuyFonts />} />
+          </Routes>
         </div>
       </Router>
     </FontState>

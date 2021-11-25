@@ -1,4 +1,6 @@
 import {
+  GET_BUY_FONTS_TEXT,
+  GET_MY_FONTS_TEXT,
   GET_TABS,
   SET_LOADING,
   SET_TAB
@@ -21,6 +23,18 @@ export default (state, action) => {
       return {
         ...state,
         currentTab: action.payload
+      }
+    case GET_BUY_FONTS_TEXT:
+      return {
+        ...state,
+        buyFontsContent: action.payload,
+        loading: false
+      }
+    case GET_MY_FONTS_TEXT:
+      return {
+        ...state,
+        myFontsContent: action.payload,
+        loading: false
       }
     default:
       return state
