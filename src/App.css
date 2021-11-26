@@ -115,6 +115,7 @@ body {
 
 /* BuyFonts */
 .buy-font-text {
+  width: 80%;
   hyphens: auto;
   text-align: left;
   font-size: 20px;
