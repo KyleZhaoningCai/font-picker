@@ -141,7 +141,7 @@ body {
 }
 
 .card.selected {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .card .color-box {
@@ -158,7 +158,7 @@ body {
 
 .card .color-box .inner-box .box-text {
   color: var(--light-color);
-  opacity: 50%;
+  opacity: 0.5;
   font-weight: 900;
 }
 

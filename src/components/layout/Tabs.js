@@ -14,7 +14,7 @@ const Tabs = () => {
         if ('label' in tab) {
           count++
           return (
-            <li className='space-right' key={tab.id}><Tab id={'tab_' + (count - 1)} position={count} defaultActive={count === 2} tab={tab} /></li>
+            <li className='space-right' key={tab.id}><Tab id={'tab_' + (count - 1)} position={count} tab={tab} /></li>
           )
         } else {
           return null
