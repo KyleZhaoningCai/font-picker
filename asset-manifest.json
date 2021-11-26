@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/font-picker/static/css/main.017ccf7a.chunk.css",
+    "main.css": "/font-picker/static/css/main.4c531aaf.chunk.css",
     "main.js": "/font-picker/static/js/main.b23395be.chunk.js",
     "main.js.map": "/font-picker/static/js/main.b23395be.chunk.js.map",
     "runtime-main.js": "/font-picker/static/js/runtime-main.b7cad03c.js",
@@ -8,13 +8,13 @@
     "static/js/2.60f93d38.chunk.js": "/font-picker/static/js/2.60f93d38.chunk.js",
     "static/js/2.60f93d38.chunk.js.map": "/font-picker/static/js/2.60f93d38.chunk.js.map",
     "index.html": "/font-picker/index.html",
-    "static/css/main.017ccf7a.chunk.css.map": "/font-picker/static/css/main.017ccf7a.chunk.css.map",
+    "static/css/main.4c531aaf.chunk.css.map": "/font-picker/static/css/main.4c531aaf.chunk.css.map",
     "static/js/2.60f93d38.chunk.js.LICENSE.txt": "/font-picker/static/js/2.60f93d38.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b7cad03c.js",
     "static/js/2.60f93d38.chunk.js",
-    "static/css/main.017ccf7a.chunk.css",
+    "static/css/main.4c531aaf.chunk.css",
     "static/js/main.b23395be.chunk.js"
   ]
 }
