@@ -19,8 +19,8 @@ const App = () => {
             <Tip />
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/fonts_a' element={<MyFonts />} />
-              <Route path='/fonts_b' element={<BuyFonts />} />
+              <Route path='fonts_a' element={<MyFonts />} />
+              <Route path='fonts_b' element={<BuyFonts />} />
             </Routes>
           </div>
         </Router>

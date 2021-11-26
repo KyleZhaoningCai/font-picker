@@ -16,7 +16,7 @@ const Tab = withFocus(({ forwardedRef, ...props }) => {
   }
 
   return (
-    <Link ref={ forwardedRef } {...props} to={'/' + endpoint} onClick={onClick} className={ currentTab === endpoint ? 'selected' : 'unselected' }>{ label }</Link>
+    <Link ref={ forwardedRef } {...props} to={endpoint} onClick={onClick} className={ currentTab === endpoint ? 'selected' : 'unselected' }>{ label }</Link>
   )
 })
 
